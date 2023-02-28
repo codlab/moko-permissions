@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 11
       - name: Build and publish local
-        run: ./gradlew build publishToMavenLocal syncMultiPlatformLibraryDebugFrameworkIosX64
+        run: ./gradlew build publishToMavenLocal syncMultiPlatformLibraryDebugFrameworkIosX64 --stacktrace
       - name: Install pods
         run: cd sample/ios-app && pod install
       - name: Check iOS
